@@ -12,7 +12,10 @@ x = np.genfromtxt('XAU_15m_data.csv',skip_header=1, delimiter=',', usecols=(1,2,
 y = np.genfromtxt('XAU_15m_data.csv',skip_header=1, delimiter=',', usecols=(4))
 
 
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=123)
+#fixing the previous mistake. The model was looking the future with the data
+split_idx = int(len(x) * 0.8)
+x_train, x_test = x[:split_idx], x[split_idx:]
+y_train, y_test = y[:split_idx], y[split_idx:]
 
 dtrain = xgb.DMatrix(data=x_train,label=y_train)  
 dtest = xgb.DMatrix(data=x_test,label=y_test)

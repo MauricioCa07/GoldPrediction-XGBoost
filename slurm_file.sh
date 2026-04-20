@@ -24,20 +24,13 @@ echo "================================================="
 echo
 
 # --- Environment Setup ---
-# Load any necessary modules
-module load miniconda
-
-# Activate a virtual environment
+module load miniconda3/25.5.1
 conda activate xdg
 
-# --- Application Execution ---
-echo "Starting application..."
-echo
 
-# Insert code here
+
+
 python starting.py
-#python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-
 
 echo
 echo "================================================="
