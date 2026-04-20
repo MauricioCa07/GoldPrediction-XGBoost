@@ -1,0 +1,17 @@
+=================================================
+Starting job 4853 on host a3-accel-0
+Job name: compiling
+Partition: accel
+Number of nodes: 1
+Total number of tasks: 59
+=================================================
+
+Starting application...
+
+RMSE: 239.2125
+MAE:  173.5640
+R²:   0.8657
+
+=================================================
+Job finished with exit code 0
+=================================================
